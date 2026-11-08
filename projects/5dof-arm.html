@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A five-degree-of-freedom robotic arm, with a staged roadmap from manual control to vision-guided manipulation and learned actions.">
+  <meta name="theme-color" content="#ffffff">
+  <title>5DOF Robotic Arm | Shriya Arunkumar</title>
+  <script>try{const t=localStorage.getItem('portfolio-theme');document.documentElement.dataset.theme=t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch{}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="header">
+    <div class="container nav">
+      <a class="wordmark" href="../index.html#home" aria-label="Shriya Arunkumar, home">Shriya Arunkumar<span class="brand-dot">.</span></a>
+      <nav aria-label="Main navigation" id="navigation">
+        <a href="../index.html#work" aria-current="page">Work</a><a href="../index.html#research">Research</a><a href="../index.html#startup">Startup</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch color theme"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.4A8.5 8.5 0 0 1 8.6 3.8a8.5 8.5 0 1 0 11.6 11.6Z"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">Menu <span aria-hidden="true">☰</span></button>
+      </div>
+    </div>
+  </header>
+  <main id="main" class="container project-page">
+    <a class="text-link back-link" href="../index.html#work"><span aria-hidden="true">←</span> All projects</a>
+    <header class="project-intro"><p class="eyebrow"><span class="red-mark"></span> Robotics / Development roadmap</p><h1 class="editorial-title">5DOF <span class="heading-accent">Robotic Arm</span></h1><p class="project-lead">A five-degree-of-freedom robotic arm, with a staged roadmap from manual control to vision-guided manipulation and learned actions.</p></header>
+    <figure class="project-cover"><img src="../assets/5dof-arm-cover.png" alt="Gray robotic arm with servo motors, routed wiring, and a two-finger gripper" width="1536" height="1024" fetchpriority="high"></figure>
+    <div class="project-story-layout">
+      <aside class="project-facts">
+        <h2>Project focus</h2><div class="tags"><span>5 DOF</span><span>3D printing</span><span>Arduino</span><span>Python</span></div>
+        <p class="roadmap-status"><span class="red-mark" aria-hidden="true"></span> Planned development · V1–V5</p>
+      </aside>
+      <div class="project-story">
+        <section class="story-section"><h2>Overview</h2><p>The project begins with a 3D-printed, manually controlled arm and builds toward coordinated motion, autonomous vision-guided pick-and-place, imitation learning, and language-conditioned manipulation.</p><p class="roadmap-note">The versions below describe the planned development progression and target capabilities, rather than completed results.</p></section>
+        <section class="story-section"><h2>Development progression</h2><ol class="version-progression"><li><span class="mono">V1</span><div><h3>Make it move</h3><p>Build and manually control the physical robot.</p></div></li><li><span class="mono">V2</span><div><h3>Make it precise</h3><p>Calculate joint angles and execute coordinated movements.</p></div></li><li><span class="mono">V3</span><div><h3>Make it see</h3><p>Detect objects and perform autonomous pick-and-place.</p></div></li><li><span class="mono">V4</span><div><h3>Make it learn</h3><p>Train the robot using human demonstrations.</p></div></li><li><span class="mono">V5</span><div><h3>Make it understand <span class="research-badge">Current ongoing research</span></h3><p>Combine language, vision, and learned manipulation policies.</p></div></li></ol></section>
+      </div>
+    </div>
+    <section class="arm-roadmap" aria-labelledby="version-roadmap-title">
+      <div class="section-heading"><div><p class="eyebrow"><span class="section-index">V1–V5 /</span> Version roadmap</p><h2 id="version-roadmap-title" class="editorial-title">From motion to <span class="heading-accent">manipulation.</span></h2></div></div>
+      <p class="table-hint" id="roadmap-table-hint">Compare the planned hardware, control methods, and capabilities across all five versions. On smaller screens, scroll horizontally to view all columns.</p>
+      <div class="roadmap-table-scroll" role="region" aria-label="Robotic arm version comparison" aria-describedby="roadmap-table-hint" tabindex="0"><table class="roadmap-table"><caption>Planned robotic arm development — V1 to V5</caption><thead><tr><th scope="col">Version</th><th scope="col">Hardware</th><th scope="col">Control method</th><th scope="col">Target capabilities</th></tr></thead><tbody><tr><th scope="row"><span class="version-label">V1</span>Basic Arm</th><td>5-DOF 3D-printed arm; MG996R, MG90S, and SG90 servos; Arduino Uno; PCA9685; gripper</td><td>Manual joint-angle commands via Arduino/Python</td><td>Functional arm, servo calibration, and basic pick-and-place</td></tr><tr><th scope="row"><span class="version-label">V2</span>Kinematics</th><td>Same hardware as V1</td><td>Forward kinematics, inverse kinematics, and trajectory planning</td><td>Move the end effector to target coordinates automatically</td></tr><tr><th scope="row"><span class="version-label">V3</span>Computer Vision</th><td>V2 hardware + webcam</td><td>OpenCV, object detection, camera calibration, and autonomous motion</td><td>Detect, locate, pick, and place objects without manual input</td></tr><tr><th scope="row"><span class="version-label">V4</span>Imitation Learning</th><td>V3 hardware + magnetic encoders or feedback-capable smart servos</td><td>Teleoperation, demonstration recording, and behavioral cloning / ACT</td><td>Learn manipulation tasks from human demonstrations</td></tr><tr><th scope="row"><span class="version-label">V5</span>Intelligent Manipulation</th><td>V4 hardware + optional additional sensors</td><td>Vision-Language Models (VLMs) and Vision-Language-Action (VLA) policies</td><td>Understand language instructions, select objects, and execute learned actions</td></tr></tbody></table></div>
+    </section>
+    <nav class="project-next" aria-label="Project navigation"><span class="eyebrow">Next project</span><a href="dvs-simulator.html">Dynamic Vision Sensor Simulator <span aria-hidden="true">→</span></a></nav>
+  </main>
+  <footer class="container footer"><a class="wordmark" href="../index.html">Shriya Arunkumar<span class="brand-dot">.</span></a><span>© <span id="year">2026</span> Shriya Arunkumar</span><a href="../index.html#work">All projects <span aria-hidden="true">↗</span></a></footer>
+</body>
+</html>
